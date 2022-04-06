@@ -1,0 +1,32 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                            <#input id="id" name="" value="${item.id}" underline="true"/>
+                            <#input id="name" name="姓名" value="${item.name}" underline="true"/>
+                            <#input id="sex" name="性别" value="${item.sex}" underline="true"/>
+                            <#input id="state" name="状态(开放、关闭)" value="${item.state}" />
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="hobby" name="爱好" value="${item.hobby}" underline="true"/>
+                            <#input id="introduce" name="介绍" value="${item.introduce}" underline="true"/>
+                            <#input id="photo" name="相片" value="${item.photo}" />
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="TblPeopleInfoDlg.editSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="TblPeopleInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/peoplemanager/tblPeople/tblPeople_info.js"></script>
+@}
